@@ -14,10 +14,10 @@ class App extends Component {
     super();
     this.state = {
       sports: {
-        tableTennisDetails: `The first time I held a racket was in 7th grade. A couple of years later, the obsession carried me to National level tournaments. I'm currently stepping into the USA Table Tennis world`,
-        archeryDetails: `Started last year, it's a lot of fun. I've discovered muscles on my back that I didn't know existed`,
-        rugbyDetails: `Every practice session is deeply satisying, can't believe I didn't discover this sport sooner`,
-        boulderingDetails: `This is so much fun, discovered that I have a fear of heights! Can't wait to do it again and again.`,
+        tableTennisDetails: `The first time I held a racket was in 7th grade. A couple of years later, the obsession carried me to Nationals in India. Currently enjoying the USA Table tennis world`,
+        archeryDetails: `Started last year, the movies show it all wrong! Helped me use muscles I've never used before`,
+        rugbyDetails: `Every practice session is deeply satisying, this one's grown pretty close to my heart`,
+        boulderingDetails: `I never knew I had a fear of heights! Can't wait to do climb again and again.`,
       },
 
       jobs: [
@@ -245,7 +245,7 @@ class App extends Component {
               <h1 className="title-font ptl">Skills</h1>
               <p className="description ptm">
                 From fixing my grandmother's WiFi to working in startups, I have
-                acquired a myriad of technical skills and programming languages.
+                acquired a myriad of technical skills and used many programming languages.
               </p>
               <div className="all-chips ptxl">
                 {this.state.skills.map((skill) => (
