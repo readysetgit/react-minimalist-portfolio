@@ -1,0 +1,61 @@
+.name {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.sport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(10, 7%, 82%);
+    max-width: fit-content;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    &:hover {
+        background: hsl(10, 7%, 74%);
+        .skill-bar:not(.active) {
+            background-color: hsl(0, 6%, 85%);
+            ;
+        }
+    }
+
+    &.expanded {
+        height: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 500px;
+        background: hsl(10, 7%, 74%);
+        .name {
+            font-weight: 700;
+            font-size: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+}
+
+
+.skill-bar {
+    background-color: hsl(0, 6%, 70%);
+    width: 30px;
+    height: 5px;
+}
+
+.skill-level {
+    display: flex;
+    gap: 3px;
+}
+
+.skill-bar.active {
+    background-color: #262626;
+}
+
+.all-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }

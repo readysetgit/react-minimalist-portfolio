@@ -20,6 +20,8 @@
   // font-size: 100px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
+
+  font-size:clamp(3.5rem, 10vw + 1rem, 10rem);
 }
 
 .description {
@@ -27,6 +29,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  font-size: 1.5rem;
 }
 
 .square-container {
@@ -49,5 +52,26 @@
 
   // grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   // grid-template-columns: 300px 300px;
+
+}
+
+.resume-square {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: hsl(10, 7%, 82%);
+  max-width: fit-content;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  &:hover {
+      background: hsl(10, 7%, 74%);
+      .skill-bar:not(.active) {
+          background-color: hsl(0, 6%, 85%);
+          ;
+      }
+  }
+  p {line-height: 24px; font-weight: 500;}
+
 
 }

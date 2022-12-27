@@ -43,20 +43,16 @@ class Job extends Component {
     return (
       <div className="company-square" onClick={this.toggleExpansion}>
         <h2 className="title">{this.props.job.name}</h2>
-        <div className="all-metadata ptl">
+        {/* <div className="all-metadata ptl">
           <p className="metadata">
             <span className="material-symbols-outlined">schedule</span>
             {this.props.job.duration}
           </p>
-          {/* <p className="metadata">
-          <span className="material-symbols-outlined">calendar_month</span>
-          {this.props.job.years}
-        </p> */}
           <p className="metadata">
-            <span class="material-symbols-outlined">badge</span>
+            <span className="material-symbols-outlined">badge</span>
             {this.props.job.position}
           </p>
-        </div>
+        </div> */}
       </div>
     );
   }
@@ -75,7 +71,7 @@ class Job extends Component {
             {this.props.job.years}
           </p>
           <p className="metadata">
-            <span class="material-symbols-outlined">badge</span>
+            <span className="material-symbols-outlined">badge</span>
             {this.props.job.position}
           </p>
           <div className="all-chips">

@@ -3,6 +3,12 @@ import "./App.scss";
 import React, { Component } from "react";
 import Sport from "./components/Sport/Sport";
 import Job from "./components/Job/Job";
+import Project from "./components/Project/Project";
+import Website from "./components/Website/Website";
+import casarecceImage from "./assets/casarecce.png";
+import thenormiesImage from "./assets/thenormies.png";
+import Chip from "./components/Chip/Chip";
+
 class App extends Component {
   constructor() {
     super();
@@ -13,197 +19,302 @@ class App extends Component {
         rugbyDetails: `Every practice session is deeply satisying, can't believe I didn't discover this sport sooner`,
         boulderingDetails: `This is so much fun, discovered that I have a fear of heights! Can't wait to do it again and again.`,
       },
-    
-        
-      jobs: {
-        thenormies: {
-            name:'The Normies',
-            duration: '5 months',
-            years: '08/2022 - 12/2022',
-            position: 'Web Developer (Internship)',
-            techstack: ['Wordpress', 'HTML/CSS/JS']
+
+      jobs: [
+        {
+          name: "University of Illinois at Chicago",
+          duration: "1.5 years+",
+          years: "09/2021 - ongoing",
+          position: "Teaching Assistant",
+          techstack: ["Physics 131", "Physics 132"],
         },
-        cronycle: {
-            name:'Cronycle',
-            duration: '2 years',
-            years: '07/2019 - 07/2022',
-            position: 'Software Developer II',
-            techstack: ['Angular', 'Typescript', 'NodeJS', 'React', 'SCSS']
-    
+        {
+          name: "The Normies",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          position: "Web Developer (Internship)",
+          techstack: ["HTML", "CSS", "Javascript"],
         },
-        bcs: {
-            name:'BCS Technology',
-            duration: '1 year',
-            years: '06/2018 - 06/2019',
-            position: 'Associate Software Developer',
-            techstack: ['.NET Core', 'Angular']
-    
+        {
+          name: "Cronycle",
+          duration: "2 years",
+          years: "07/2019 - 07/2022",
+          position: "Software Developer II",
+          techstack: ["Angular", "Typescript", "NodeJS", "React", "SCSS"],
         },
-      }
+        {
+          name: "BCS Technology",
+          duration: "1 year",
+          years: "06/2018 - 06/2019",
+          position: "Associate Software Developer",
+          techstack: [".NET", ".NET Core", "Angular", "Ruby on Rails"],
+        },
+      ],
+
+      projects: [
+        {
+          name: "Sinatra - MVX Browser Updates",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Worked on instantaneously updating commercial browsers without requiring a restart of the web browser.
+          The update switches to a newer version of the browser without losing the open tabs and the associated data state.`,
+          techstack: ["Javascript"],
+          icon: "web",
+        },
+        {
+          name: "Campus Buddy",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Created a social media web application called "Campus Buddy" using Angular and Firebase. The application helps UIC students find
+          hotspots of activity on and off campus and features map functionality using the Google Places API.`,
+          techstack: ["Angular", "Firebase", "Places API"],
+          icon: "diversity_4",
+        },
+        {
+          name: "Albatross",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Created a compiler in C that supported Binary and Unary operations, Conditionals, For loops, While loops, If Else, Variables and
+          Functions.`,
+          techstack: ["C", "Assembly"],
+          icon: "settings",
+        },
+        {
+          name: "Ethereum - open source contribution",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Identified and fixed a bug in the ethereum-react-native-boilerplate repository.`,
+          techstack: ["Java"],
+          icon: "currency_bitcoin",
+        },
+        {
+          name: "Hotspots",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Created a website that uses Google Maps Places API to display points of interest.
+          Implemented secure login with password encryption and maintained user sessions using passport.js.
+         Automated the deployment process using CI/CD on GitHub Actions and deployed the docker image to Heroku.`,
+          techstack: [
+            "React",
+            "NodeJS",
+            "Passport.js",
+            "Docker",
+            "SQLite",
+            "Heroku",
+          ],
+          icon: "public",
+        },
+      ],
+
+      websites: [
+        {
+          name: "The Normies",
+          imgUrl: thenormiesImage,
+          url: "https://thenormies.com/",
+        },
+        {
+          name: "Casarecce",
+          imgUrl: casarecceImage,
+          url: "https://www.casarecce.in/",
+        },
+      ],
+
+      skills: ['HTML','CSS','SASS','LESS','Javascript','Typescript','C/C++','Java','Python','Assembly','MSSQL','SQLite','MongoDB','Angular','React','Node.js','Flask(Python)','NgRx','RxJS','Docker']
     };
   }
 
   render() {
     return (
       <React.Fragment>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link rel="stylesheet" href="./styles.css" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-
         <div className="container-body">
           <div className="container">
-          <div className="section-container fun-container">
-            <h1 className="title-font ptl">Sports</h1>
-            <p className="description ptm">A sound mind in a sound body</p>
-            <div className="sports-container ptxl">
-              <Sport
-                name="Table Tennis"
-                icon="sports_tennis"
-                skillbars="4"
-                details={this.state.sports.tableTennisDetails}
-              />
-              <Sport
-                name="Rugby"
-                icon="sports_rugby"
-                skillbars="2"
-                details={this.state.sports.rugbyDetails}
-              />
-              <Sport
-                name="Bouldering"
-                icon="landscape"
-                skillbars="1"
-                details={this.state.sports.boulderingDetails}
-              />
-              <Sport
-                name="Archery"
-                icon="adjust"
-                skillbars="3"
-                details={this.state.sports.archeryDetails}
-              />
 
-              {/* <div className="sport">
-                    <p className="name"><span className="material-symbols-outlined">
-                            adjust
-                        </span></p>
-                    <span className="skill-level">
-                        <span className="skill-bar active"></span>
-                        <span className="skill-bar active"></span>
-                        <span className="skill-bar active"></span>
-                        <span className="skill-bar "></span>
-                        <span className="skill-bar"></span>
-                    </span>
+            <div className="section-container header-container">
+            <h1 className="title-font ptl">Hi, I am Fahad!</h1>
+            <p className="description ptm">
+            Curiosity manifests itself in various fashions. In my case, this curiosity is visible whenever someone mentions computers or cats.
+              </p>
+            </div>
+
+            <div className="section-container fun-container">
+              <h1 className="title-font ptl">Sports</h1>
+              <p className="description ptm">A sound mind in a sound body</p>
+              <div className="sports-container ptxl">
+                <Sport
+                  name="Table Tennis"
+                  icon="sports_tennis"
+                  skillbars="4"
+                  details={this.state.sports.tableTennisDetails}
+                />
+                <Sport
+                  name="Rugby"
+                  icon="sports_rugby"
+                  skillbars="2"
+                  details={this.state.sports.rugbyDetails}
+                />
+                <Sport
+                  name="Bouldering"
+                  icon="landscape"
+                  skillbars="1"
+                  details={this.state.sports.boulderingDetails}
+                />
+                <Sport
+                  name="Archery"
+                  icon="adjust"
+                  skillbars="3"
+                  details={this.state.sports.archeryDetails}
+                />
+
+                {/* <div className="sport">
+                      <p className="name"><span className="material-symbols-outlined">
+                              adjust
+                          </span></p>
+                      <span className="skill-level">
+                          <span className="skill-bar active"></span>
+                          <span className="skill-bar active"></span>
+                          <span className="skill-bar active"></span>
+                          <span className="skill-bar "></span>
+                          <span className="skill-bar"></span>
+                      </span>
+                  </div>
+                  <div className="sport">
+                      <p className="name"><span className="material-symbols-outlined">
+                              sports_rugby
+                          </span></p>
+                      <span className="skill-level">
+                          <span className="skill-bar active"></span>
+                          <span className="skill-bar active"></span>
+                          <span className="skill-bar "></span>
+                          <span className="skill-bar "></span>
+                          <span className="skill-bar"></span>
+                      </span>
+                  </div>
+                  <div className="sport">
+                      <p className="name"><span className="material-symbols-outlined">
+                              landscape
+                          </span></p>
+                      <span className="skill-level">
+                          <span className="skill-bar active"></span>
+                          <span className="skill-bar "></span>
+                          <span className="skill-bar "></span>
+                          <span className="skill-bar "></span>
+                          <span className="skill-bar"></span>
+                      </span>
+                  </div> */}
+              </div>
+            </div>
+            <div className="section-container xp-container">
+              <h1 className="title-font ptl">Experience</h1>
+              <p className="description ptm">
+                Places that took a chance with me
+              </p>
+              <div className="square-container ptxl">
+                {this.state.jobs.map((j) => (
+                  <Job job={j} />
+                ))}
+              </div>
+            </div>
+
+
+            <div className="section-container projects-container">
+              <h1 className="title-font ptl">Projects</h1>
+              <p className="description ptm">Some stuff that I've done</p>
+              <div className="square-container ptxl">
+                {this.state.projects.map((p) => (
+                  <Project project={p} />
+                ))}
+              </div>
+            </div>
+
+
+
+            <div className="section-container skills-container">
+              <h1 className="title-font ptl">Websites</h1>
+              <p className="description ptm">
+                It'd be weird if a web developer had no websites
+              </p>
+              <div className="square-container ptxl">
+                {this.state.websites.map((w) => (
+                  <Website website={w} />
+                ))}
+              </div>
+            </div>
+
+
+            <div className="section-container skills-container">
+              <h1 className="title-font ptl">Skills</h1>
+              <p className="description ptm">
+                From fixing my grandmother's WiFi to working in startups, I have
+                acquired a myriad of technical skills and programming languages.
+              </p>
+              <div className="all-chips ptxl">
+                {this.state.skills.map((skill) => (
+                  <Chip name={skill} />
+                ))}
+              </div>
+            </div>
+
+
+
+            <div className="section-container skills-container">
+              <h1 className="title-font ptl">More links</h1>
+              {/* <p className="description ptm">More details about my jobs</p> */}
+              <div className="square-container ptxl">
+                <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "https://drive.google.com/file/d/1aepL4VXde58D97Ik7bQ0R2Kvh653uFVa/view?usp=sharing",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">description</span>
+                  <p>Resume</p>
+                  {/* <span class="material-symbols-outlined">link</span> */}
                 </div>
-                <div className="sport">
-                    <p className="name"><span className="material-symbols-outlined">
-                            sports_rugby
-                        </span></p>
-                    <span className="skill-level">
-                        <span className="skill-bar active"></span>
-                        <span className="skill-bar active"></span>
-                        <span className="skill-bar "></span>
-                        <span className="skill-bar "></span>
-                        <span className="skill-bar"></span>
-                    </span>
+                <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "https://ieeexplore.ieee.org/document/8286110",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">description</span>
+                  <p>IEEE Publication</p>
+                  {/* <span class="material-symbols-outlined">link</span> */}
                 </div>
-                <div className="sport">
-                    <p className="name"><span className="material-symbols-outlined">
-                            landscape
-                        </span></p>
-                    <span className="skill-level">
-                        <span className="skill-bar active"></span>
-                        <span className="skill-bar "></span>
-                        <span className="skill-bar "></span>
-                        <span className="skill-bar "></span>
-                        <span className="skill-bar"></span>
-                    </span>
+                <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "https://www.linkedin.com/in/fahad24/",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">person_add</span>
+                  <p>Linkedin</p>
+                </div>
+                {/* <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "mailto:fahadfile@gmail.com",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">email</span>
+                  <p>Contact</p>
                 </div> */}
+              </div>
             </div>
-          </div>
-          <div className="section-container xp-container">
-            <h1 className="title-font ptl">Experience</h1>
-            <p className="description ptm">
-              Places that took a chance with me
-            </p>
-            <div className="square-container ptxl">
-                <Job job={this.state.jobs.thenormies}/>
-                <Job job={this.state.jobs.cronycle}/>
-                <Job job={this.state.jobs.bcs}/>
 
-              {/* <div className="company-square">
-                <h2 className="title">The Normies</h2>
-                <p className="metadata">
-                  <span className="material-symbols-outlined">schedule</span>5
-                  months
-                </p>
-                <p className="metadata">
-                  <span className="material-symbols-outlined">
-                    calendar_month
-                  </span>
-                  08/2022 - 12/2022
-                </p>
-              </div> */}
-            </div>
-          </div>
-
-          <div className="section-container projects-container">
-            <h1 className="title-font ptl">Projects</h1>
-            <p className="description ptm">
-              Some stuff that I've done
-            </p>
-            <div className="square-container ptxl">
-                <Job job={this.state.jobs.thenormies}/>
-                <Job job={this.state.jobs.cronycle}/>
-                <Job job={this.state.jobs.bcs}/>
-            </div>
-          </div>
-
-
-          <div className="section-container skills-container">
-            <h1 className="title-font ptl">Skills</h1>
-            <p className="description ptm">
-            From fixing my grandmother's WiFi to working in startups, I have acquired a myriad of technical skills and programming languages.
-            </p>
-            <div className="square-container ptxl">
-                <Job job={this.state.jobs.thenormies}/>
-                <Job job={this.state.jobs.cronycle}/>
-                <Job job={this.state.jobs.bcs}/>
-            </div>
-          </div>
 
           </div>
-
         </div>
       </React.Fragment>
     );
