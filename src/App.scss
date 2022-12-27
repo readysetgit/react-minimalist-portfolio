@@ -1,17 +1,23 @@
+@import url(./styles/helpers.scss);
 
-* {
-  font-family: 'Roboto', sans-serif;
-  color: #262626;
+.container-body {
+  background-color: 	hsl(17, 8%, 84%);
+  height: 100%;
+  padding: 100px 0;
 }
 
 .container {
-  background-color: #D9D4D2;
-  padding: 200px;
+  max-width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  // height: fit-content;
 }
 
 .title-font {
   color: #262626;
-  font-size: 100px;
+  // font-size: 100px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
 }
@@ -25,80 +31,23 @@
 
 .square-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.company-square {
-  background-color: hsl(10, 7%, 82%);
-  height: 200px;
-  width: 200px;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.company-square:hover {
-  background: hsl(10,7%,74%);
-
-}
-
-.title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  /* text-align: center; */
-}
-
-.initial-letter {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.metadata {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: bold;
-}
 
 .sports-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
+  gap: 20px;
+  
+  // Experimenting with grid
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  grid-auto-rows: min-content; /* OR min-content*/
 
-.sport {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: hsl(10, 7%, 82%);
-  max-width: fit-content;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 6px;
-}
+  // grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  // grid-template-columns: 300px 300px;
 
-.skill-bar {
-  background-color: 	hsl(0, 6%, 70%);
-  width: 30px;
-  height: 5px;
-}
-
-.sport:hover {
-  background: hsl(10,7%,74%);
-}
-
-.sport:hover .skill-bar:not(.active) {
-  background-color: hsl(0, 6%, 85%);;
-}
-
-.skill-level {
-  display: flex;
-  gap: 3px;
-}
-
-.skill-bar.active {
-  background-color: #262626;
 }

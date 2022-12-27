@@ -1,0 +1,44 @@
+.company-square {
+  background-color: hsl(10, 7%, 82%);
+  height: auto;
+  width: fit-content;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  &:hover {
+    background: hsl(10, 7%, 74%);
+  }
+  .title {
+    font-style: normal;
+  
+    line-height: 30px;
+  
+    font-weight: 700;
+    font-size: 20px;
+    /* text-align: center; */
+  }
+  
+  .all-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .metadata {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .all-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  &.expanded {
+    background: hsl(10, 7%, 74%);
+    // .all-metadata {display: flex; gap: 4px;}
+  }
+}
+
