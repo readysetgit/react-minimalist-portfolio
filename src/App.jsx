@@ -12,12 +12,24 @@ import Chip from "./components/Chip/Chip";
 class App extends Component {
   constructor() {
     super();
+    // TODO: 
+    // 1. More links to the top
+    // 2. Skills scream "Javk of All Trades", highlight the top 3 skills and fade away in the skills
+    // 3. Fix the alignment when cards are expanded
+    // 4. Add a chevron to the sports cards
+    // 5. Move sports further down
+    // 6. Add a footer or a bottom padding
+    // 7. Color animation to the website screenshots? 
+    
+    
+    
+    
     this.state = {
       sports: {
         tableTennisDetails: `The first time I held a racket was in 7th grade. A couple of years later, the obsession carried me to Nationals in India. Currently enjoying the USA Table tennis world`,
         archeryDetails: `Started last year, the movies show it all wrong! Helped me use muscles I've never used before`,
         rugbyDetails: `Every practice session is deeply satisying, this one's grown pretty close to my heart`,
-        boulderingDetails: `I never knew I had a fear of heights! Can't wait to do climb again and again.`,
+        boulderingDetails: `I never knew I had a fear of heights! Can't wait to climb again and again.`,
       },
 
       jobs: [
