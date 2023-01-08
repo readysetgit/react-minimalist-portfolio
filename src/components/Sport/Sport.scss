@@ -10,15 +10,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: hsl(10, 7%, 82%);
+    background-color: hsl(34deg, 78%, 80%);
     max-width: fit-content;
     padding: 20px;
     cursor: pointer;
     border-radius: 6px;
     &:hover {
-        background: hsl(10, 7%, 74%);
+        background: hsl(34, 78%, 70%);
         .skill-bar:not(.active) {
-            background-color: hsl(0, 6%, 85%);
+            background-color: antiquewhite;
             ;
         }
     }
@@ -28,9 +28,9 @@
         flex-direction: column;
         align-items: flex-start;
         max-width: 500px;
-        background: hsl(10, 7%, 74%);
+        background: hsl(34, 78%, 70%);
         .skill-bar:not(.active) {
-            background-color: hsl(0, 6%, 85%);
+            background-color: antiquewhite;
             ;
         }
         .name {
@@ -45,7 +45,7 @@
 
 
 .skill-bar {
-    background-color: hsl(0, 6%, 70%);
+    background-color: antiquewhite;
     width: 30px;
     height: 5px;
 }
