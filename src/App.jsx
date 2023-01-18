@@ -12,18 +12,15 @@ import Chip from "./components/Chip/Chip";
 class App extends Component {
   constructor() {
     super();
-    // TODO: 
-    // 1. More links to the top
-    // 2. Skills scream "Javk of All Trades", highlight the top 3 skills and fade away in the skills
-    // 3. Fix the alignment when cards are expanded
-    // 4. Add a chevron to the sports cards
+    // TODO:
+    // DONE 1. More links to the top
+    // DONE 2. Skills scream "Javk of All Trades", highlight the top 3 skills and fade away in the skills
+    // DONE 3. Fix the alignment when cards are expanded
+    // DONE 4. Add a chevron to the sports cards
     // 5. Move sports further down
-    // 6. Add a footer or a bottom padding
-    // 7. Color animation to the website screenshots? 
-    
-    
-    
-    
+    // DONE 6. Add a footer or a bottom padding
+    // 7. Color animation to the website screenshots?
+
     this.state = {
       sports: {
         tableTennisDetails: `The first time I held a racket was in 7th grade. A couple of years later, the obsession carried me to Nationals in India. Currently enjoying the USA Table tennis world`,
@@ -131,7 +128,28 @@ class App extends Component {
         },
       ],
 
-      skills: ['HTML','CSS','SASS','LESS','Javascript','Typescript','C/C++','Java','Python','Assembly','MSSQL','SQLite','MongoDB','Angular','React','Node.js','Flask(Python)','NgRx','RxJS','Docker']
+      skills: [
+        "Angular",
+        "RxJS",
+        "Node.js",
+        "NgRx",
+        "HTML",
+        "CSS",
+        "SASS",
+        "LESS",
+        "Javascript",
+        "Typescript",
+        "C/C++",
+        "Java",
+        "Python",
+        "Assembly",
+        "MSSQL",
+        "SQLite",
+        "MongoDB",
+        "React",
+        "Flask(Python)",
+        "Docker",
+      ],
     };
   }
 
@@ -140,12 +158,116 @@ class App extends Component {
       <React.Fragment>
         <div className="container-body">
           <div className="container">
-
             <div className="section-container header-container">
-            <h1 className="title-font ptl">Hi, I am Fahad!</h1>
-            <p className="description ptm">
-            Curiosity manifests itself in various fashions. In my case, this curiosity is visible whenever someone mentions computers or cats.
+              <h1 className="title-font ptl">Hi, I am Fahad!</h1>
+              <p className="description ptm">
+                Curiosity manifests itself in various fashions. In my case, this
+                curiosity is visible when someone mentions computers or cats.
               </p>
+              <div className="links-container ptxl">
+                <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "https://drive.google.com/file/d/1aepL4VXde58D97Ik7bQ0R2Kvh653uFVa/view?usp=sharing",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">description</span>
+                  <p>Resume</p>
+                  {/* <span class="material-symbols-outlined">link</span> */}
+                </div>
+                <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "https://ieeexplore.ieee.org/document/8286110",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">description</span>
+                  <p>Publication</p>
+                  {/* <span class="material-symbols-outlined">link</span> */}
+                </div>
+                <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "https://www.linkedin.com/in/fahad24/",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">person_add</span>
+                  <p>Linkedin</p>
+                </div>
+                {/* <div
+                  className="resume-square"
+                  onClick={() => {
+                    window.open(
+                      "mailto:fahadfile@gmail.com",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span class="material-symbols-outlined">email</span>
+                  <p>Contact</p>
+                </div> */}
+              </div>
+            </div>
+
+
+            <div className="section-container xp-container">
+              <h1 className="title-font ptl">Experience</h1>
+              <p className="description ptm">
+                Places that took a chance with me
+              </p>
+              <div className="square-container ptxl">
+                {this.state.jobs.map((j) => (
+                  <Job job={j} />
+                ))}
+              </div>
+            </div>
+
+            <div className="section-container projects-container">
+              <h1 className="title-font ptl">Projects</h1>
+              <p className="description ptm">Some stuff that I've done</p>
+              <div className="square-container ptxl">
+                {this.state.projects.map((p) => (
+                  <Project project={p} />
+                ))}
+              </div>
+            </div>
+
+            <div className="section-container skills-container">
+              <h1 className="title-font ptl">Websites</h1>
+              <p className="description ptm">
+                It'd be weird if a web developer had no websites
+              </p>
+              <div className="square-container ptxl">
+                {this.state.websites.map((w) => (
+                  <Website website={w} />
+                ))}
+              </div>
+            </div>
+
+            <div className="section-container skills-container">
+              <h1 className="title-font ptl">Skills</h1>
+              <p className="description ptm">
+                From fixing my grandmother's WiFi to working in startups, I have
+                acquired a myriad of technical skills and used many programming
+                languages.
+              </p>
+              <div className="all-chips ptxl">
+                {this.state.skills.map((skill, index) => {
+                  if (index < 4) {
+                    return <Chip classes="" name={skill} />;
+                  }
+                  return <Chip classes="intermediate" name={skill} />;
+                })}
+              </div>
             </div>
 
             <div className="section-container fun-container">
@@ -215,117 +337,10 @@ class App extends Component {
                   </div> */}
               </div>
             </div>
-            <div className="section-container xp-container">
-              <h1 className="title-font ptl">Experience</h1>
-              <p className="description ptm">
-                Places that took a chance with me
-              </p>
-              <div className="square-container ptxl">
-                {this.state.jobs.map((j) => (
-                  <Job job={j} />
-                ))}
-              </div>
-            </div>
-
-
-            <div className="section-container projects-container">
-              <h1 className="title-font ptl">Projects</h1>
-              <p className="description ptm">Some stuff that I've done</p>
-              <div className="square-container ptxl">
-                {this.state.projects.map((p) => (
-                  <Project project={p} />
-                ))}
-              </div>
-            </div>
-
-
-
-            <div className="section-container skills-container">
-              <h1 className="title-font ptl">Websites</h1>
-              <p className="description ptm">
-                It'd be weird if a web developer had no websites
-              </p>
-              <div className="square-container ptxl">
-                {this.state.websites.map((w) => (
-                  <Website website={w} />
-                ))}
-              </div>
-            </div>
-
-
-            <div className="section-container skills-container">
-              <h1 className="title-font ptl">Skills</h1>
-              <p className="description ptm">
-                From fixing my grandmother's WiFi to working in startups, I have
-                acquired a myriad of technical skills and used many programming languages.
-              </p>
-              <div className="all-chips ptxl">
-                {this.state.skills.map((skill) => (
-                  <Chip name={skill} />
-                ))}
-              </div>
-            </div>
-
-
-
-            <div className="section-container skills-container">
+            {/* <div className="section-container skills-container">
               <h1 className="title-font ptl">More links</h1>
-              {/* <p className="description ptm">More details about my jobs</p> */}
-              <div className="square-container ptxl">
-                <div
-                  className="resume-square"
-                  onClick={() => {
-                    window.open(
-                      "https://drive.google.com/file/d/1aepL4VXde58D97Ik7bQ0R2Kvh653uFVa/view?usp=sharing",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <span class="material-symbols-outlined">description</span>
-                  <p>Resume</p>
-                  {/* <span class="material-symbols-outlined">link</span> */}
-                </div>
-                <div
-                  className="resume-square"
-                  onClick={() => {
-                    window.open(
-                      "https://ieeexplore.ieee.org/document/8286110",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <span class="material-symbols-outlined">description</span>
-                  <p>IEEE Publication</p>
-                  {/* <span class="material-symbols-outlined">link</span> */}
-                </div>
-                <div
-                  className="resume-square"
-                  onClick={() => {
-                    window.open(
-                      "https://www.linkedin.com/in/fahad24/",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <span class="material-symbols-outlined">person_add</span>
-                  <p>Linkedin</p>
-                </div>
-                {/* <div
-                  className="resume-square"
-                  onClick={() => {
-                    window.open(
-                      "mailto:fahadfile@gmail.com",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <span class="material-symbols-outlined">email</span>
-                  <p>Contact</p>
-                </div> */}
-              </div>
-            </div>
 
-
+            </div> */}
           </div>
         </div>
       </React.Fragment>

@@ -37,8 +37,28 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  grid-auto-rows: min-content;
 }
 
+.links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  grid-auto-rows: min-content;
+
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .sports-container {
   display: flex;
@@ -61,7 +81,7 @@
   align-items: center;
   gap: 10px;
   background-color: hsl(34deg, 78%, 80%);
-  max-width: fit-content;
+  width: 200px;
   padding: 20px;
   cursor: pointer;
   border-radius: 6px;
@@ -72,7 +92,7 @@
           ;
       }
   }
-  p {line-height: 24px; font-weight: 500;}
+  p {line-height: 24px; font-weight: 600;}
 
 
 }

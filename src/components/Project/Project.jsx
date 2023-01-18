@@ -27,28 +27,42 @@ class Project extends Component {
 
   renderCollapsedForm() {
     return (
-      <div className="sport" onClick={this.toggleExpansion}>
-        <p className="name">
-          <span className="material-symbols-outlined">{this.props.project.icon}</span>
-        </p>
-        <span className="skill-level">
-            {this.props.project.name}
-        </span>
+      <div className="project" onClick={this.toggleExpansion}>
+        <div className="flex-row space-between w100">
+          <div className="flex-row gap-m">
+            <p className="name">
+              <span className="material-symbols-outlined">
+                {this.props.project.icon}
+              </span>
+            </p>
+            <span className="name">{this.props.project.name}</span>
+          </div>
+          <span className="material-symbols-outlined">expand_more</span>
+
+        </div>
       </div>
     );
   }
 
   renderExpandedForm() {
     return (
-      <div className="sport expanded" onClick={this.toggleExpansion}>
-        <p className="name">
-          <span className="material-symbols-outlined">{this.props.project.icon}</span>
-          {this.props.project.name}
-        </p>
+      <div className="project expanded" onClick={this.toggleExpansion}>
+        <div className="flex-row space-between w100">
+          <p className="name">
+            <span className="material-symbols-outlined">
+              {this.props.project.icon}
+            </span>
+            {this.props.project.name}
+          </p>
+          <span className="material-symbols-outlined">expand_less</span>
+        </div>
+
+
         <p className="ptl">{this.props.project.details}</p>
         <div className="all-chips">
-            { this.props.project.techstack && this.props.project.techstack.map(skill => <Chip name={skill}/>)} 
-          </div>
+          {this.props.project.techstack &&
+            this.props.project.techstack.map((skill) => <Chip name={skill} />)}
+        </div>
       </div>
     );
   }

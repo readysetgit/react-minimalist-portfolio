@@ -11,7 +11,7 @@
     align-items: center;
     gap: 10px;
     background-color: hsl(34deg, 78%, 80%);
-    max-width: fit-content;
+    width: clamp(250px, 100%, 300px);
     padding: 20px;
     cursor: pointer;
     border-radius: 6px;

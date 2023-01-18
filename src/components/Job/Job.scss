@@ -2,7 +2,7 @@
   background-color: hsl(34deg, 78%, 80%);
   // border: 4px solid hsl(10, 7%, 82%);
   height: auto;
-  width: fit-content;
+  width: clamp(250px, 100%, 400px);
   padding: 20px;
   cursor: pointer;
   border-radius: 6px;

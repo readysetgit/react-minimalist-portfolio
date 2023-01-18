@@ -41,12 +41,19 @@ class Sport extends Component {
   renderCollapsedForm() {
     return (
       <div className="sport" onClick={this.toggleExpansion}>
-        <p className="name">
-          <span className="material-symbols-outlined">{this.props.icon}</span>
-        </p>
-        <span className="skill-level">
-          {this.renderSkillBars(this.props.skillbars)}
-        </span>
+        <div className="flex-row space-between w100">
+          <span className="flex-row gap-m">
+            <p className="name">
+              <span className="material-symbols-outlined">
+                {this.props.icon}
+              </span>
+            </p>
+            <span className="skill-level">
+              {this.renderSkillBars(this.props.skillbars)}
+            </span>
+          </span>
+          <span className="material-symbols-outlined">expand_more</span>
+        </div>
       </div>
     );
   }
@@ -54,10 +61,14 @@ class Sport extends Component {
   renderExpandedForm() {
     return (
       <div className="sport expanded" onClick={this.toggleExpansion}>
-        <p className="name">
-          {this.props.name}
-          <span className="material-symbols-outlined">{this.props.icon}</span>
-        </p>
+        <div className="flex-row space-between w100">
+          <p className="name">
+            {this.props.name}
+            <span className="material-symbols-outlined">{this.props.icon}</span>
+          </p>
+          <span className="material-symbols-outlined">expand_less</span>
+        </div>
+
         <span className="skill-level ptm">
           {this.renderSkillBars(this.props.skillbars)}
         </span>

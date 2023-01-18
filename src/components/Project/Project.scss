@@ -2,16 +2,23 @@
     display: flex;
     gap: 10px;
     align-items: center;
+
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 
-.sport {
+.project {
     display: flex;
     align-items: center;
     gap: 10px;
     background-color: hsl(34deg, 78%, 80%);
     background-color: hsl(34deg, 78%, 80%);
-    max-width: fit-content;
+    // max-width: fit-content;
+    width: clamp(250px, 100%, 400px);
     padding: 20px;
     cursor: pointer;
     border-radius: 6px;
@@ -59,4 +66,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+  }
+
+  p {
+    line-height: 24px;
   }

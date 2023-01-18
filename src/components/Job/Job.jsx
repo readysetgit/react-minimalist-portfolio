@@ -41,8 +41,10 @@ class Job extends Component {
 
   renderCollapsedForm() {
     return (
-      <div className="company-square" onClick={this.toggleExpansion}>
+      <div className="company-square flex-row space-between" onClick={this.toggleExpansion}>
         <h2 className="title">{this.props.job.name}</h2>
+        <span className="material-symbols-outlined">expand_more</span>
+
         {/* <div className="all-metadata ptl">
           <p className="metadata">
             <span className="material-symbols-outlined">schedule</span>
@@ -60,7 +62,10 @@ class Job extends Component {
   renderExpandedForm() {
     return (
       <div className="company-square expanded" onClick={this.toggleExpansion}>
-        <h2 className="title">{this.props.job.name}</h2>
+        <div className="flex-row space-between w100">
+          <h2 className="title">{this.props.job.name}</h2>
+          <span className="material-symbols-outlined">expand_less</span>
+        </div>
         <div className="all-metadata ptl">
           <p className="metadata">
             <span className="material-symbols-outlined">schedule</span>
