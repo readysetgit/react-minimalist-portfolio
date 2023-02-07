@@ -53,7 +53,7 @@ class Website extends Component {
             alt="Screenshot of 'The Normies' website"
           />
         </div>
-        <span className="flex-row v-center gap-s">
+        <span className="flex-row v-center flex-center gap-s">
         <h2 className="title">
           {this.props.website.name}
         </h2>

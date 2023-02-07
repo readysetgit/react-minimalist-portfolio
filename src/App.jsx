@@ -7,19 +7,16 @@ import Project from "./components/Project/Project";
 import Website from "./components/Website/Website";
 import casarecceImage from "./assets/casarecce.png";
 import thenormiesImage from "./assets/thenormies.png";
+import rotaGeneratorImage from "./assets/rota_generator.png";
+
 import Chip from "./components/Chip/Chip";
 
 class App extends Component {
   constructor() {
     super();
     // TODO:
-    // DONE 1. More links to the top
-    // DONE 2. Skills scream "Javk of All Trades", highlight the top 3 skills and fade away in the skills
-    // DONE 3. Fix the alignment when cards are expanded
-    // DONE 4. Add a chevron to the sports cards
-    // 5. Move sports further down
-    // DONE 6. Add a footer or a bottom padding
-    // 7. Color animation to the website screenshots?
+    // 1. Add in IN PROGRESS section
+    // 2. Color animation to the website screenshots?
 
     this.state = {
       sports: {
@@ -126,6 +123,11 @@ class App extends Component {
           imgUrl: casarecceImage,
           url: "https://www.casarecce.in/",
         },
+        {
+          name: "Rota Generator",
+          imgUrl: rotaGeneratorImage,
+          url: "https://rota-generator.web.app/rota-generator",
+        },
       ],
 
       skills: [
@@ -139,6 +141,9 @@ class App extends Component {
         "LESS",
         "Javascript",
         "Typescript",
+        ".NET",
+        ".NET Core",
+        "C#",
         "C/C++",
         "Java",
         "Python",
@@ -149,6 +154,7 @@ class App extends Component {
         "React",
         "Flask(Python)",
         "Docker",
+        "Ruby on Rails"
       ],
     };
   }
@@ -262,10 +268,11 @@ class App extends Component {
               </p>
               <div className="all-chips ptxl">
                 {this.state.skills.map((skill, index) => {
-                  if (index < 4) {
-                    return <Chip classes="" name={skill} />;
-                  }
-                  return <Chip classes="intermediate" name={skill} />;
+                  return <Chip classes="" name={skill} />;
+                  // if (index < 4) {
+                  //   return <Chip classes="" name={skill} />;
+                  // }
+                  // return <Chip classes="intermediate" name={skill} />;
                 })}
               </div>
             </div>
