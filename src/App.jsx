@@ -132,6 +132,7 @@ class App extends Component {
 
       skills: [
         "Angular",
+        "React",
         "RxJS",
         "Node.js",
         "NgRx",
