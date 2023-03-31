@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a85ba69.css",
+    "main.css": "/static/css/main.b13e2d11.css",
     "main.js": "/static/js/main.5f41935b.js",
     "static/js/787.bb8156c4.chunk.js": "/static/js/787.bb8156c4.chunk.js",
     "static/media/casarecce.png": "/static/media/casarecce.2efb975207ab061da162.png",
@@ -8,12 +8,12 @@
     "static/media/rota_generator.png": "/static/media/rota_generator.b638ff9a51f4495eb3e4.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.4a85ba69.css.map": "/static/css/main.4a85ba69.css.map",
+    "main.b13e2d11.css.map": "/static/css/main.b13e2d11.css.map",
     "main.5f41935b.js.map": "/static/js/main.5f41935b.js.map",
     "787.bb8156c4.chunk.js.map": "/static/js/787.bb8156c4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a85ba69.css",
+    "static/css/main.b13e2d11.css",
     "static/js/main.5f41935b.js"
   ]
 }
