@@ -71,7 +71,7 @@ class App extends Component {
       ],
       projects: [
         {
-          name: "Calenduh — Generative AI Calendar",
+          name: "Calenduh",
           duration: "Ongoing",
           years: "02/2025",
           details: `Built an AI-powered assistant that automated Google Calendar scheduling, reducing manual planning time by over 70%. Integrated OpenAI’s GPT API to interpret commands like “Plan my 3-day workout.” Currently expanding features with voice command support and accessibility tools.`,
@@ -79,7 +79,7 @@ class App extends Component {
           icon: "calendar_month"
         },
         {
-          name: "ER Rota Generator — Automated Scheduling System",
+          name: "ER Rota Generator",
           duration: "Ongoing",
           years: "2024",
           details: `Developed a React-based rota generator to automate ER shift scheduling, reducing manual work and ensuring fair doctor distribution. Enforced constraints like minimum staffing per shift and enabled CSV exports for hospital systems.`,
@@ -87,7 +87,7 @@ class App extends Component {
           icon: "schedule"
         },
         {
-          name: "Casarecce — E-Commerce for Artisanal Pasta",
+          name: "Casarecce",
           duration: "Ongoing",
           years: "2023",
           details: `Launched a responsive online store for Casarecce (now Casa Pasta Bar), India’s first artisanal pasta bar. Added WhatsApp-based support to reduce cart abandonment and improve satisfaction.`,
