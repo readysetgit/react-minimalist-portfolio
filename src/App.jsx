@@ -87,13 +87,57 @@ class App extends Component {
           icon: "schedule"
         },
         {
-          name: "Casarecce",
-          duration: "Ongoing",
-          years: "2023",
-          details: `Launched a responsive online store for Casarecce (now Casa Pasta Bar), India’s first artisanal pasta bar. Added WhatsApp-based support to reduce cart abandonment and improve satisfaction.`,
-          techstack: ["React", "E-commerce", "WhatsApp API"],
-          icon: "storefront"
-        }
+          name: "Sinatra - MVX Browser Updates",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Worked on instantaneously updating commercial browsers without requiring a restart of the web browser.
+          The update switches to a newer version of the browser without losing the open tabs and the associated data state.`,
+          techstack: ["Javascript"],
+          icon: "web",
+        },
+        {
+          name: "Campus Buddy",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Created a social media web application called "Campus Buddy" using Angular and Firebase. The application helps UIC students find
+          hotspots of activity on and off campus and features map functionality using the Google Places API.`,
+          techstack: ["Angular", "Firebase", "Places API"],
+          icon: "diversity_4",
+        },
+        {
+          name: "Albatross",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Created a compiler in C that supported Binary and Unary operations, Conditionals, For loops, While loops, If Else, Variables and
+          Functions.`,
+          techstack: ["C", "Assembly"],
+          icon: "settings",
+        },
+        {
+          name: "Ethereum - open source contribution",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Identified and fixed a bug in the ethereum-react-native-boilerplate repository.`,
+          techstack: ["Java"],
+          icon: "currency_bitcoin",
+        },
+        {
+          name: "Hotspots",
+          duration: "5 months",
+          years: "08/2022 - 12/2022",
+          details: `Created a website that uses Google Maps Places API to display points of interest.
+          Implemented secure login with password encryption and maintained user sessions using passport.js.
+         Automated the deployment process using CI/CD on GitHub Actions and deployed the docker image to Heroku.`,
+          techstack: [
+            "React",
+            "NodeJS",
+            "Passport.js",
+            "Docker",
+            "SQLite",
+            "Heroku",
+          ],
+          icon: "public",
+        },
       ],
       websites: [
         {
@@ -192,7 +236,7 @@ class App extends Component {
             <div className="section-container xp-container">
               <h1 className="title-font ptl">Experience</h1>
               <p className="description ptm">
-                Places that took a chance with me
+                Places that I took a chance with
               </p>
               <div className="square-container ptxl">
                 {this.state.jobs.map((j) => (
