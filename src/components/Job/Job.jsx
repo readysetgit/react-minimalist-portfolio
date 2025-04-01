@@ -67,6 +67,9 @@ class Job extends Component {
           <span className="material-symbols-outlined">expand_less</span>
         </div>
         <div className="all-metadata ptl">
+          <p className="metadata description">
+            {this.props.job.details}
+          </p>
           <p className="metadata">
             <span className="material-symbols-outlined">schedule</span>
             {this.props.job.duration}
@@ -80,7 +83,7 @@ class Job extends Component {
             {this.props.job.position}
           </p>
           <div className="all-chips">
-            { this.props.job.techstack && this.props.job.techstack.map(skill => <Chip name={skill}/>)} 
+            {this.props.job.techstack && this.props.job.techstack.map(skill => <Chip name={skill} />)}
           </div>
         </div>
       </div>
