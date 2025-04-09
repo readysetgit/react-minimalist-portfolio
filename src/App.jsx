@@ -8,6 +8,7 @@ import Website from "./components/Website/Website";
 import casarecceImage from "./assets/casarecce.png";
 import thenormiesImage from "./assets/thenormies.png";
 import rotaGeneratorImage from "./assets/rota_generator.png";
+import calenduhImage from "./assets/calenduh.png";
 
 import Chip from "./components/Chip/Chip";
 
@@ -27,47 +28,64 @@ class App extends Component {
       },
       jobs: [
         {
+          name: "The Normies LLC",
+          duration: "Ongoing",
+          years: "06/2023 - Present",
+          position: "Technical Lead",
+          techstack: [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "WordPress Development",
+            "Backend Integration",
+            "API Design & Integration",
+            "Authentication (OAuth)",
+            "UI/UX Design",
+            "Web Performance Optimization",
+            "Membership Systems",
+            "Chrome Extension Development",
+            "Payment Infrastructure",
+          ],
+          details:
+            "Sole developer managing technical infrastructure for The Normies (900K+ YouTube subscribers), supporting a high-traffic, community-driven content platform. Built custom JavaScript modules, internal Chrome extensions, and integrated membership platforms like Patreon and Fourthwall. Currently developing a custom payment and membership plugin to reduce third-party reliance.",
+        },
+        {
           name: "FastModel Sports, Chicago",
           duration: "1.5 years",
           details:
             "Achieved a 300% market expansion by adding soccer, volleyball, and football to the platform, supporting clients including NBA, WNBA, NCAA, and Olympic teams. Engineered a workaround to Shopify Plus saving $24,000 annually and targeting an $840,000 high school market. Boosted sales by $100,000+ through FastIntelligence AI integration and fixed critical bugs that impacted over 100 coaches.",
           years: "10/2023 - 02/2025",
           position: "Software Engineer, Frontend",
-          techstack: ["React", "NodeJS", "Shopify", "AI", "A/B Testing"]
+          techstack: ["React", "NodeJS", "Shopify", "AI", "A/B Testing"],
         },
-        {
-          name: "The Normies LLC (Remote)",
-          duration: "Ongoing",
-          details:
-            "Improved video gallery load speeds by 2800% by fixing thumbnail sizing issues. Optimized UI/UX for Contact Us and Partnerships pages using HCI principles. Designed a high-impact Affiliates page that boosted partner engagement.",
-          years: "06/2023 - Present",
-          position: "Web Developer",
-          techstack: ["HTML", "CSS", "JavaScript"]
-        },
+
         {
           name: "University of Illinois at Chicago",
           duration: "1.5 years+",
-          details: "Held office hours and graded assignments for PHYS 131 and 132 (Introductory Physics for Life Sciences II). Course taught by Professor Richard DeJonghe and Jan-Hendrik Spille.",
+          details:
+            "Held office hours and graded assignments for PHYS 131 and 132 (Introductory Physics for Life Sciences II). Course taught by Professor Richard DeJonghe and Jan-Hendrik Spille.",
           years: "09/2021 - ongoing",
           position: "Teaching Assistant",
-          techstack: ["Physics 131", "Physics 132"]
+          techstack: ["Physics 131", "Physics 132"],
         },
         {
           name: "Cronycle, India",
           duration: "2 years",
-          details: "Streamlined publishing by integrating 7 platforms, cutting publishing time by 90%. Migrated Angular 7 to Angular 9, reducing load times by 25 seconds across 100+ components.",
+          details:
+            "Streamlined publishing by integrating 7 platforms, cutting publishing time by 90%. Migrated Angular 7 to Angular 9, reducing load times by 25 seconds across 100+ components.",
           years: "07/2019 - 01/2021",
           position: "Software Development Engineer II",
-          techstack: ["Angular", "Typescript", "NodeJS", "React", "SCSS"]
+          techstack: ["Angular", "Typescript", "NodeJS", "React", "SCSS"],
         },
         {
           name: "BCS Technology, India",
           duration: "1 year",
-          details: "Tutored 10+ colleagues in advanced RxJS and async programming. Fixed 100+ UI bugs across airline websites. Worked with ASP.NET, .NET Core, and Ruby on Rails.",
+          details:
+            "Tutored 10+ colleagues in advanced RxJS and async programming. Fixed 100+ UI bugs across airline websites. Worked with ASP.NET, .NET Core, and Ruby on Rails.",
           years: "06/2018 - 06/2019",
           position: "Associate Software Developer",
-          techstack: [".NET", ".NET Core", "Angular", "Ruby on Rails"]
-        }
+          techstack: [".NET", ".NET Core", "Angular", "Ruby on Rails"],
+        },
       ],
       projects: [
         {
@@ -76,7 +94,7 @@ class App extends Component {
           years: "02/2025",
           details: `Built an AI-powered assistant that automated Google Calendar scheduling, reducing manual planning time by over 70%. Integrated OpenAI’s GPT API to interpret commands like “Plan my 3-day workout.” Currently expanding features with voice command support and accessibility tools.`,
           techstack: ["React", "Node.js", "OpenAI API", "Google Calendar API"],
-          icon: "calendar_month"
+          icon: "calendar_month",
         },
         {
           name: "ER Rota Generator",
@@ -84,7 +102,7 @@ class App extends Component {
           years: "2024",
           details: `Developed a React-based rota generator to automate ER shift scheduling, reducing manual work and ensuring fair doctor distribution. Enforced constraints like minimum staffing per shift and enabled CSV exports for hospital systems.`,
           techstack: ["React", "CSV", "Scheduling Logic"],
-          icon: "schedule"
+          icon: "schedule",
         },
         {
           name: "Sinatra - MVX Browser Updates",
@@ -141,6 +159,11 @@ class App extends Component {
       ],
       websites: [
         {
+          name: "Calenduh",
+          imgUrl: calenduhImage,
+          url: "https://www.calenduh.org/",
+        },
+        {
           name: "The Normies",
           imgUrl: thenormiesImage,
           url: "https://thenormies.com/",
@@ -154,16 +177,52 @@ class App extends Component {
           name: "Rota Generator",
           imgUrl: rotaGeneratorImage,
           url: "https://rota-generator.web.app/rota-generator",
-        }
+        },
       ],
       skills: [
-        "Angular", "React", "RxJS", "Node.js", "NgRx", "HTML", "CSS", "SASS", "LESS",
-        "Javascript", "Typescript", ".NET", ".NET Core", "C#", "C/C++", "Java", "Python",
-        "Assembly", "MSSQL", "SQLite", "MongoDB", "PostgreSQL", "Graphql", "NextJS",
-        "PostGIS", "OpenAI", "Google APIs", "Redux", "D3", "Docker", "Azure", "AWS",
-        "CircleCI", "Heroku", "NameCheap", "Google Cloud", "Git", "VS Code", "IntelliJ",
-        "Android Studio", "Figma", "Jira"
-      ]
+        "Angular",
+        "React",
+        "RxJS",
+        "Node.js",
+        "NgRx",
+        "HTML",
+        "CSS",
+        "SASS",
+        "LESS",
+        "Javascript",
+        "Typescript",
+        ".NET",
+        ".NET Core",
+        "C#",
+        "C/C++",
+        "Java",
+        "Python",
+        "Assembly",
+        "MSSQL",
+        "SQLite",
+        "MongoDB",
+        "PostgreSQL",
+        "Graphql",
+        "NextJS",
+        "PostGIS",
+        "OpenAI",
+        "Google APIs",
+        "Redux",
+        "D3",
+        "Docker",
+        "Azure",
+        "AWS",
+        "CircleCI",
+        "Heroku",
+        "NameCheap",
+        "Google Cloud",
+        "Git",
+        "VS Code",
+        "IntelliJ",
+        "Android Studio",
+        "Figma",
+        "Jira",
+      ],
     };
   }
 
@@ -231,7 +290,6 @@ class App extends Component {
                 </div> */}
               </div>
             </div>
-
 
             <div className="section-container xp-container">
               <h1 className="title-font ptl">Experience</h1>
